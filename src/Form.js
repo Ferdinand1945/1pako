@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
         this.state ={
             username: '',
             password: '',
-            buttonDisabled: false
+            buttonDisabled: false,
         }
     }
 
@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
         this.setState({
             username: '',
             password: '',
-            buttonDisabled: false
+            buttonDisabled: false,
         })
     }
     async doLogin(){
@@ -36,7 +36,7 @@ class LoginForm extends React.Component {
         if (!this.state.password) {
             return;
         }
-        this.setState({buttonDisabled: true})
+        this.setState({buttonDisabled: true});
 
         try {
             let res = await fetch('./login', {
